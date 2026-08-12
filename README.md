@@ -19,7 +19,7 @@ With dual **Page-Level** and **Chapter-Level** AI processing, readers can automa
 
 ## 📸 Demo & Screenshots
 
-![Bookify Application Banner & Interface](https://postimg.cc/GTmnCfMM)
+![Bookify Application Banner & Interface](https://res.cloudinary.com/dvnik6ewc/image/upload/v1786558788/Screenshot_2026-08-12_231805_mw6kc0.png)
 
 <p align="center">
   <i>The Bookify workspace featuring the PDF viewer, Chapter Outline, and AI Assistant Sidebar.</i>
@@ -52,5 +52,4 @@ With dual **Page-Level** and **Chapter-Level** AI processing, readers can automa
 - **Diagram Rendering:** [Mermaid.js](https://mermaid.js.org/)
 - **AI Infrastructure:** [OpenRouter API](https://openrouter.ai/) (`google/gemini-2.5-flash`)
 
----
 
