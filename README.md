@@ -19,7 +19,7 @@ With dual **Page-Level** and **Chapter-Level** AI processing, readers can automa
 
 ## 📸 Demo & Screenshots
 
-![Bookify Application Banner & Interface](https://kommodo.ai/i/dUepwScbvHrrfk9YxjII)
+![Bookify Application Banner & Interface](https://postimg.cc/GTmnCfMM)
 
 <p align="center">
   <i>The Bookify workspace featuring the PDF viewer, Chapter Outline, and AI Assistant Sidebar.</i>
