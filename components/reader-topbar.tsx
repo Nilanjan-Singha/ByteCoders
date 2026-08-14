@@ -164,7 +164,7 @@ export function ReaderTopbar() {
 
         <div className="md:hidden">
           <DropdownMenu>
-            <DropdownMenuTrigger asChild>
+            <DropdownMenuTrigger>
               <Button
                 variant="ghost"
                 size="icon"
