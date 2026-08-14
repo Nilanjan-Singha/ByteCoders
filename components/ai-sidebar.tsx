@@ -826,11 +826,20 @@ const fetchScopeText = async (): Promise<string> => {
   /* ------------------------------------------------------------------------ */
 
   return (
-    <aside
-      className={`flex h-full flex-col border-l bg-background transition-all duration-300 ${
-        isExpanded ? "w-[580px]" : "w-80"
-      }`}
-    >
+<aside
+  className={`
+    flex
+    h-full
+    min-h-0
+    w-full
+    flex-col
+    bg-background
+    transition-all
+    duration-300
+
+    ${isExpanded ? "lg:w-[580px]" : "w-full"}
+  `}
+>
       {/* Header */}
       <div className="flex items-center gap-1.5 border-b p-2">
         <div className="flex min-w-0 flex-1 items-center gap-2">

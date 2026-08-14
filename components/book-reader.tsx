@@ -306,18 +306,18 @@ export function BookReader({
   return (
     <div className="relative flex h-full min-h-0 flex-col">
       {/* Toolbar */}
-      <div className="flex h-12 shrink-0 items-center gap-2 border-b px-3">
+      <div className="flex h-12 shrink-0 items-center gap-1.5 sm:gap-2 border-b px-2 sm:px-3">
         <Button
           variant="ghost"
           size="icon"
-          className="size-8"
+          className="size-8 shrink-0"
           onClick={onToggleChapters}
           title={chaptersOpen ? "Hide chapters" : "Show chapters"}
         >
           <PanelLeft className="size-4" />
         </Button>
 
-        <span className="max-w-[240px] truncate text-xs text-muted-foreground">
+        <span className="max-w-[120px] xs:max-w-[180px] sm:max-w-[240px] truncate text-xs text-muted-foreground">
           {currentChapter
             ? currentChapter.title
             : loading
@@ -326,7 +326,7 @@ export function BookReader({
         </span>
 
         {/* Zoom controls */}
-        <div className="ml-auto flex items-center gap-1">
+        <div className="ml-auto flex items-center gap-0.5 sm:gap-1">
           <Button
             variant="ghost"
             size="icon"
@@ -338,7 +338,7 @@ export function BookReader({
             <ZoomOut className="size-4" />
           </Button>
 
-          <span className="min-w-[40px] text-center font-mono text-xs">
+          <span className="hidden sm:inline-block min-w-[40px] text-center font-mono text-xs">
             {Math.round(zoom * 100)}%
           </span>
 
@@ -353,9 +353,9 @@ export function BookReader({
             <ZoomIn className="size-4" />
           </Button>
 
-          <Separator orientation="vertical" className="mx-1 h-4" />
+          <Separator orientation="vertical" className="mx-1 h-4 hidden sm:block" />
 
-          <div className="text-xs text-muted-foreground">
+          <div className="hidden sm:block text-xs text-muted-foreground">
             {pages > 0 ? `${pages} pages` : "—"}
           </div>
         </div>
@@ -377,30 +377,30 @@ export function BookReader({
 
         <div
           ref={containerRef}
-          className="h-full w-full overflow-auto px-8 py-8 scroll-smooth"
+          className="h-full w-full overflow-auto px-2 py-4 sm:px-8 sm:py-8 scroll-smooth"
         />
       </div>
 
       {/* Page Navigation Floating Dock */}
-      <div className="absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 items-center gap-3 rounded-full border bg-background/95 px-2 py-1 shadow-lg backdrop-blur">
+      <div className="absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 items-center gap-1.5 sm:gap-3 rounded-full border bg-background/95 px-2 py-1 shadow-lg backdrop-blur">
         <Button
           variant="ghost"
           size="sm"
-          className="h-7"
+          className="h-7 px-2"
           onClick={() => goToPage(currentPage - 1)}
           disabled={currentPage <= 1 || loading}
         >
           ←
         </Button>
 
-        <span className="px-2 font-mono text-xs">
+        <span className="px-1 sm:px-2 font-mono text-xs">
           {currentPage} / {pages}
         </span>
 
         <Button
           variant="ghost"
           size="sm"
-          className="h-7"
+          className="h-7 px-2"
           onClick={() => goToPage(currentPage + 1)}
           disabled={currentPage >= pages || loading || pages === 0}
         >
